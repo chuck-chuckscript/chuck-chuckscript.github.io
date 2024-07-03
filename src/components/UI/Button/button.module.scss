@@ -1,0 +1,20 @@
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.defaultButton{
+    border: 1px solid rgb(255, 217, 0);
+    background-color: rgb(255, 217, 0);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+
+    &:hover{
+      background-color: transparent;
+      color: rgb(255, 217, 0);
+    }
+}

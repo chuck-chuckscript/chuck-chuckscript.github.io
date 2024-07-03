@@ -1,0 +1,98 @@
+.workSpace{
+  width:100%;
+  display:grid;
+  grid-template-areas: 'h1 h1'
+  'guide guide'
+  'input output'
+  'textarea result';
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 1fr;
+  gap: 5px;
+  h1{
+    grid-area: h1;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    grid-template-areas: 'h1'
+  'guide'
+  'input'
+  'output'
+  'textarea'
+  'result';
+    grid-template-columns: 1fr;
+  }
+}
+.workSpace__input, .workSpace__output{
+  color: white;
+}
+.workSpace__input{
+  grid-area: input;
+  span{
+    font-family: "Courier New", sans-serif, monospace !important;
+    color: #c9c9c9;
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 20px;
+  }
+
+}
+.workSpace__guide{
+  grid-area: guide;
+  text-align: center;
+  color: white;
+  span{
+    display: inline-block;
+    margin-top: 5px;
+    background-color: #c2c26e;
+    padding: 0 4px;
+    border-radius: 20px;
+    color: black;
+  }
+  span.warning{
+    background-color: #b23838;
+    color: white;
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 20px;
+  }
+}
+.workSpace__output{
+  grid-area: output;
+  span{
+    font-family: "Courier New", sans-serif, monospace !important;
+    color: #42ad34;
+
+  }
+  margin-bottom: 20px;
+}
+.workSpace__textarea{
+  width: 100%;
+  overflow-y: scroll;
+  min-height: 100px;
+  resize: none;
+  grid-area: textarea;
+}
+.workSpace__result{
+  position: relative;
+  font-family: "Courier New", sans-serif, monospace !important;
+  padding: 30px 10px;
+  font-size: 0.8rem;
+  color: #54f63f;
+  border-radius: 10px;
+  background-color: #1b1c31;
+  grid-area: result;
+  word-break: break-word;
+  white-space: pre-wrap;
+  button.copy{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #565656;
+    margin: 5px;
+    font-size: 25px;
+    &:hover{
+      color: white;
+    }
+  }
+
+}
